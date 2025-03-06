@@ -8,28 +8,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>나의 포트폴리오</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">소개</a></li>
-                    <li><a href="#projects">프로젝트</a></li>
-                    <li><a href="#skills">기술</a></li>
-                    <li><a href="#contact">연락처</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>안녕하세요, 제 웹사이트에 오신 것을 환영합니다!</h2>
-                <p>웹 개발 및 디자인 포트폴리오</p>
-                <a href="#contact" class="button">연락하기</a>
+        <div class="profile-container">
+            <div class="profile-photo">
+                <!-- 프로필 사진을 여기에 추가 (이미지 파일을 생성해야 합니다) -->
+                <img src="images/profile.jpg" alt="프로필 사진">
+            </div>
+            <h1 class="name">당신의 이름</h1>
+            <p class="title">직함, 학위 또는 분야</p>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fas fa-dove"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-researchgate"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-orcid"></i></a>
             </div>
         </div>
+        
+        <nav class="main-nav">
+            <div class="nav-container">
+                <ul>
+                    <li><a href="#about">소개</a></li>
+                    <li><a href="#research">연구</a></li>
+                    <li><a href="#publications">출판물</a></li>
+                    <li><a href="#teaching">교육</a></li>
+                    <li><a href="#news">소식</a></li>
+                    <li><a href="#contact">연락처</a></li>
+                </ul>
+            </div>
+        </nav>
     </section>
 
     <section id="about" class="about">
@@ -44,50 +53,55 @@
         </div>
     </section>
 
-    <section id="projects" class="projects">
+    <section id="research" class="research">
         <div class="container">
-            <h2 class="section-title">프로젝트</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>프로젝트 1</h3>
-                    <p>프로젝트에 대한 간단한 설명을 작성하세요.</p>
-                    <div class="project-links">
-                        <a href="#" class="button">자세히 보기</a>
-                        <a href="#" class="button">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>프로젝트 2</h3>
-                    <p>프로젝트에 대한 간단한 설명을 작성하세요.</p>
-                    <div class="project-links">
-                        <a href="#" class="button">자세히 보기</a>
-                        <a href="#" class="button">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>프로젝트 3</h3>
-                    <p>프로젝트에 대한 간단한 설명을 작성하세요.</p>
-                    <div class="project-links">
-                        <a href="#" class="button">자세히 보기</a>
-                        <a href="#" class="button">GitHub</a>
-                    </div>
-                </div>
+            <h2 class="section-title">연구</h2>
+            <div class="research-content">
+                <p>이 섹션에서는 귀하의 연구 분야와 관심사에 대해 설명합니다.</p>
+                <!-- 연구 내용 추가 -->
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills">
+    <section id="publications" class="publications">
         <div class="container">
-            <h2 class="section-title">기술</h2>
-            <div class="skills-content">
-                <ul class="skills-list">
-                    <li><i class="fab fa-html5"></i> HTML5</li>
-                    <li><i class="fab fa-css3-alt"></i> CSS3</li>
-                    <li><i class="fab fa-js"></i> JavaScript</li>
-                    <li><i class="fab fa-react"></i> React</li>
-                    <li><i class="fab fa-node-js"></i> Node.js</li>
-                    <li><i class="fab fa-github"></i> Git & GitHub</li>
+            <h2 class="section-title">출판물</h2>
+            <div class="publications-content">
+                <ul class="publications-list">
+                    <li>
+                        <h3>논문 제목 1</h3>
+                        <p>저자, 저널, 연도, 페이지</p>
+                    </li>
+                    <li>
+                        <h3>논문 제목 2</h3>
+                        <p>저자, 저널, 연도, 페이지</p>
+                    </li>
+                    <!-- 더 많은 출판물 추가 -->
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="teaching" class="teaching">
+        <div class="container">
+            <h2 class="section-title">교육</h2>
+            <div class="teaching-content">
+                <p>이 섹션에서는 귀하의 교육 활동과 과목에 대해 설명합니다.</p>
+                <!-- 교육 내용 추가 -->
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news">
+        <div class="container">
+            <h2 class="section-title">소식</h2>
+            <div class="news-content">
+                <div class="news-item">
+                    <h3>최신 소식 1</h3>
+                    <p class="date">2023년 3월 15일</p>
+                    <p>소식에 대한 간단한 설명입니다.</p>
+                </div>
+                <!-- 더 많은 소식 추가 -->
             </div>
         </div>
     </section>
@@ -108,7 +122,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 나의 포트폴리오. All Rights Reserved.</p>
+            <p>&copy; 2023 개인 웹사이트. All Rights Reserved.</p>
         </div>
     </footer>
 
