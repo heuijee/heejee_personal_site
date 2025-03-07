@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="homepage">
     <section id="hero" class="hero">
         <div class="profile-container">
             <div class="profile-photo">
@@ -30,87 +30,50 @@
         <nav class="main-nav">
             <div class="nav-container">
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#cv">CV</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </section>
 
-    <section id="about" class="about">
+    <section class="home-intro">
         <div class="container">
-            <h2 class="section-title">About</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hello, I am a researcher with a keen interest in web development. I enjoy creative problem-solving and user-friendly design.</p>
-                    <p>This website was created using GitHub Pages and serves as a space to showcase my portfolio and projects.</p>
+            <div class="intro-content">
+                <h2>Welcome to my Academic Website</h2>
+                <p>I am a Ph.D. student specializing in Computer Science. My research focuses on various aspects of web development, machine learning, and user experience design. This website showcases my academic work, research projects, and publications.</p>
+                <div class="intro-buttons">
+                    <a href="about.html" class="btn">Learn More About Me</a>
+                    <a href="research.html" class="btn">View My Research</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="research" class="research">
+    <section class="home-highlights">
         <div class="container">
-            <h2 class="section-title">Research</h2>
-            <div class="research-content">
-                <p>This section describes my research areas and interests.</p>
-                <!-- Add research content here -->
-            </div>
-        </div>
-    </section>
-
-    <section id="publications" class="publications">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="publications-content">
-                <ul class="publications-list">
-                    <li>
-                        <h3>Paper Title 1</h3>
-                        <p>Authors, Journal, Year, Pages</p>
-                    </li>
-                    <li>
-                        <h3>Paper Title 2</h3>
-                        <p>Authors, Journal, Year, Pages</p>
-                    </li>
-                    <!-- Add more publications here -->
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-content">
-                <p>This section describes my projects and initiatives.</p>
-                <!-- Add projects content here -->
-            </div>
-        </div>
-    </section>
-
-    <section id="cv" class="cv">
-        <div class="container">
-            <h2 class="section-title">Curriculum Vitae</h2>
-            <div class="cv-content">
-                <p>This section contains my academic and professional background.</p>
-                <!-- Add CV content here -->
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-content">
-                <p>Please reach out to me through the following channels:</p>
-                <div class="contact-links">
-                    <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> your-email@example.com</a>
-                    <a href="https://github.com/yourusername"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://linkedin.com/in/yourusername"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <h2 class="section-title">Recent Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h3>Latest Publication</h3>
+                    <p>"Paper Title" published in Journal Name (2023)</p>
+                    <a href="publications.html" class="read-more">Read More</a>
+                </div>
+                
+                <div class="highlight-card">
+                    <h3>Current Project</h3>
+                    <p>A brief description of your current research project</p>
+                    <a href="projects.html" class="read-more">Read More</a>
+                </div>
+                
+                <div class="highlight-card">
+                    <h3>Recent Award</h3>
+                    <p>Description of a recent achievement or award</p>
+                    <a href="about.html" class="read-more">Read More</a>
                 </div>
             </div>
         </div>
