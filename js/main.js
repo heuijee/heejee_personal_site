@@ -1,52 +1,51 @@
 // 페이지가 로드되면 실행
 document.addEventListener('DOMContentLoaded', function() {
-    // 스크롤 이벤트 리스너 추가
+    // 헤더 스타일 변경을 위한 스크롤 이벤트 리스너
     window.addEventListener('scroll', function() {
-        // 스크롤이 일정 거리 이상 내려가면 네비게이션에 클래스 추가
-        var nav = document.querySelector('.main-nav');
-        if (window.scrollY > 100) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
+        var header = document.querySelector('.site-header');
+        if (header && window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else if (header) {
+            header.classList.remove('scrolled');
         }
     });
 
-    // 네비게이션 부드러운 스크롤
-    document.querySelectorAll('.main-nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
+    // 홈페이지에서만 실행되는 코드
+    if (document.body.classList.contains('homepage')) {
+        // 소셜 아이콘 애니메이션
+        const socialIcons = document.querySelectorAll('.social-icon');
+        socialIcons.forEach((icon, index) => {
+            setTimeout(() => {
+                icon.classList.add('visible');
+            }, 200 * index);
         });
-    });
+    }
 
-    // 페이지 로드 시 소셜 아이콘 애니메이션
-    const socialIcons = document.querySelectorAll('.social-icon');
-    socialIcons.forEach((icon, index) => {
-        setTimeout(() => {
-            icon.classList.add('visible');
-        }, 200 * index);
-    });
-
-    // 섹션 요소들이 뷰포트에 들어올 때 페이드인 효과 적용
-    const fadeElements = document.querySelectorAll('.section-title, .publications-list li, .news-item');
+    // 페이지 로드 시 요소 페이드인 효과
+    const fadeElements = document.querySelectorAll('.section-title, .publications-list li, .highlight-card, .project-card, .cv-item');
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            }
+    if (fadeElements.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        
+        fadeElements.forEach(el => {
+            observer.observe(el);
         });
-    }, { threshold: 0.2 });
+    }
 
-    fadeElements.forEach(el => {
-        observer.observe(el);
-    });
+    // 컨택트 폼 제출 처리 (실제 제출 기능은 구현되지 않음)
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('메시지가 전송되었습니다. (데모용 알림)');
+            contactForm.reset();
+        });
+    }
 }); 
