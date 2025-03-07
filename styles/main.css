@@ -544,4 +544,368 @@ footer {
     .section-title {
         font-size: 1.8rem;
     }
+}
+
+/* 사이트 헤더 스타일 */
+.site-header {
+    background-color: #333;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.site-title a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-header .main-nav {
+    margin-top: 0;
+    background: transparent;
+    box-shadow: none;
+    width: auto;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .main-nav ul li a {
+    color: white;
+}
+
+.site-header .main-nav ul li a:hover,
+.site-header .main-nav ul li a.active {
+    color: #007bff;
+}
+
+/* 페이지 섹션 공통 스타일 */
+.page-section {
+    padding-top: 120px;
+    min-height: 80vh;
+}
+
+/* 홈페이지 인트로 섹션 */
+.home-intro {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.intro-content h2 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.intro-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 홈페이지 하이라이트 섹션 */
+.home-highlights {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.highlight-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.highlight-card p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.read-more::after {
+    content: '→';
+    margin-left: 5px;
+    transition: margin-left 0.2s;
+}
+
+.read-more:hover::after {
+    margin-left: 10px;
+}
+
+/* 프로젝트 그리드 */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.project-card p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+}
+
+/* CV 스타일 */
+.cv-download {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cv-section {
+    margin-bottom: 50px;
+}
+
+.cv-section h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.cv-item {
+    margin-bottom: 30px;
+}
+
+.cv-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cv-item h4 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0;
+    color: #333;
+}
+
+.cv-date {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 500;
+    color: #007bff;
+}
+
+.cv-item p {
+    margin-bottom: 10px;
+}
+
+.cv-item ul {
+    margin-left: 20px;
+}
+
+.cv-item li {
+    margin-bottom: 5px;
+}
+
+.cv-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* 컨택트 폼 스타일 */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.contact-info {
+    padding-right: 30px;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info p {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Artegra Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* 버튼 스타일 */
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3);
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .site-header .main-nav {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .page-section {
+        padding-top: 180px;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-info {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlights-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 } 
