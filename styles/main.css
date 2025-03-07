@@ -1,3 +1,28 @@
+/* 글꼴 정의 */
+@font-face {
+    font-family: 'Artegra Sans';
+    src: url('../fonts/Fontspring-DEMO-artegra_sans-700-bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artegra Sans';
+    src: url('../fonts/Fontspring-DEMO-artegra_sans-500-medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artegra Sans';
+    src: url('../fonts/Fontspring-DEMO-artegra_sans-400-regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* 전체 사이트 스타일 */
 * {
     margin: 0;
@@ -6,7 +31,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Artegra Sans', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
@@ -65,6 +90,7 @@ body {
 }
 
 .name {
+    font-family: 'Artegra Sans', sans-serif;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 10px;
@@ -73,8 +99,9 @@ body {
 }
 
 .title {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 500;
     font-size: 1.5rem;
-    font-weight: 300;
     margin-bottom: 30px;
     max-width: 500px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -175,9 +202,11 @@ section {
 }
 
 .section-title {
+    font-family: 'Artegra Sans', sans-serif;
     text-align: center;
     margin-bottom: 50px;
     font-size: 2.2rem;
+    font-weight: 700;
     color: #333;
     position: relative;
     opacity: 0;
@@ -262,6 +291,8 @@ section {
 }
 
 .publications-list h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
     font-size: 1.3rem;
     margin-bottom: 10px;
     color: #333;
@@ -270,6 +301,28 @@ section {
 .publications-list p {
     color: #666;
     font-style: italic;
+}
+
+/* 프로젝트 섹션 */
+.projects {
+    background-color: #f8f9fa;
+}
+
+.projects-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* CV 섹션 */
+.cv {
+    background-color: white;
+}
+
+.cv-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 /* 교육 섹션 */
@@ -306,6 +359,8 @@ section {
 }
 
 .news-item h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
     font-size: 1.4rem;
     margin-bottom: 10px;
     color: #333;
