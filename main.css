@@ -1,0 +1,911 @@
+/* 글꼴 정의 */
+@font-face {
+    font-family: 'Artegra Sans';
+    src: url('../fonts/Fontspring-DEMO-artegra_sans-700-bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artegra Sans';
+    src: url('../fonts/Fontspring-DEMO-artegra_sans-500-medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artegra Sans';
+    src: url('../fonts/Fontspring-DEMO-artegra_sans-400-regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 전체 사이트 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Artegra Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 헤더 및 히어로 섹션 스타일 */
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1614935151651-0bea6508db6b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 0;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeDown 1s ease-out;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: zoomIn 1s ease-out;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-family: 'Artegra Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.2s ease-out;
+}
+
+.title {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    max-width: 500px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.4s ease-out;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.social-icon.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    background-color: #f0f0f0;
+}
+
+.social-icon i {
+    font-size: 1.2rem;
+}
+
+/* 메인 네비게이션 스타일 */
+.main-nav {
+    width: 100%;
+    background-color: white;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    position: relative;
+    z-index: 100;
+    animation: fadeUp 1s ease-out;
+}
+
+.main-nav.scrolled {
+    position: fixed;
+    top: 20px;
+    width: 80%;
+    max-width: 800px;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav ul li {
+    padding: 15px 0;
+}
+
+.main-nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #007bff;
+}
+
+/* 섹션 공통 스타일 */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-family: 'Artegra Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.section-title.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    margin: 15px auto 0;
+}
+
+/* 소개 섹션 */
+.about {
+    background-color: white;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+/* 연구 섹션 */
+.research {
+    background-color: #f8f9fa;
+}
+
+.research-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* 출판물 섹션 */
+.publications {
+    background-color: white;
+}
+
+.publications-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.publications-list {
+    list-style-type: none;
+}
+
+.publications-list li {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.publications-list li.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.publications-list h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.publications-list p {
+    color: #666;
+    font-style: italic;
+}
+
+/* 프로젝트 섹션 */
+.projects {
+    background-color: #f8f9fa;
+}
+
+.projects-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* CV 섹션 */
+.cv {
+    background-color: white;
+}
+
+.cv-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* 교육 섹션 */
+.teaching {
+    background-color: #f8f9fa;
+}
+
+.teaching-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* 소식 섹션 */
+.news {
+    background-color: white;
+}
+
+.news-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-item {
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.news-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.news-item h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-item .date {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* 연락처 섹션 */
+.contact {
+    background-color: #f8f9fa;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content p {
+    margin-bottom: 30px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-links a:hover {
+    color: #007bff;
+}
+
+.contact-links i {
+    font-size: 1.3rem;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* 버튼 스타일 */
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3);
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* 애니메이션 키프레임 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .name {
+        font-size: 2.5rem;
+    }
+    
+    .title {
+        font-size: 1.2rem;
+    }
+    
+    .main-nav {
+        width: 95%;
+    }
+    
+    .main-nav.scrolled {
+        width: 90%;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+    
+    .main-nav ul li {
+        padding: 10px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .name {
+        font-size: 2rem;
+    }
+    
+    .title {
+        font-size: 1rem;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .main-nav ul li a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* 사이트 헤더 스타일 */
+.site-header {
+    background-color: #333;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.site-title a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-header .main-nav {
+    margin-top: 0;
+    background: transparent;
+    box-shadow: none;
+    width: auto;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .main-nav ul li a {
+    color: white;
+}
+
+.site-header .main-nav ul li a:hover,
+.site-header .main-nav ul li a.active {
+    color: #007bff;
+}
+
+/* 페이지 섹션 공통 스타일 */
+.page-section {
+    padding-top: 120px;
+    min-height: 80vh;
+}
+
+/* 홈페이지 인트로 섹션 */
+.home-intro {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.intro-content h2 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.intro-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 홈페이지 하이라이트 섹션 */
+.home-highlights {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.highlight-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.highlight-card p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.read-more::after {
+    content: '→';
+    margin-left: 5px;
+    transition: margin-left 0.2s;
+}
+
+.read-more:hover::after {
+    margin-left: 10px;
+}
+
+/* 프로젝트 그리드 */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.project-card p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+}
+
+/* CV 스타일 */
+.cv-download {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cv-section {
+    margin-bottom: 50px;
+}
+
+.cv-section h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.cv-item {
+    margin-bottom: 30px;
+}
+
+.cv-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cv-item h4 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0;
+    color: #333;
+}
+
+.cv-date {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 500;
+    color: #007bff;
+}
+
+.cv-item p {
+    margin-bottom: 10px;
+}
+
+.cv-item ul {
+    margin-left: 20px;
+}
+
+.cv-item li {
+    margin-bottom: 5px;
+}
+
+.cv-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* 컨택트 폼 스타일 */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.contact-info {
+    padding-right: 30px;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info p {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Artegra Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* 버튼 스타일 */
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3);
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .site-header .main-nav {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .page-section {
+        padding-top: 180px;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-info {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlights-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+} 
