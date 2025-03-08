@@ -59,9 +59,9 @@ body.homepage {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    max-width: 1800px;
+    max-width: 1900px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
 }
@@ -71,7 +71,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 30px 60px;
     position: relative;
 }
 
@@ -113,7 +113,7 @@ header {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    height: 60%;
+    height: 90%;
     width: 1px;
     background-color: #333;
 }
@@ -124,18 +124,18 @@ header {
     padding: 0 15px;
     font-size: 27px;
     letter-spacing: -0.02em;
-    transition: font-weight 0.3s ease; /* 글꼴 두께 변화에 애니메이션 적용 */
+    transition: font-weight 0.1s ease; /* 글꼴 두께 변화에 애니메이션 적용 */
 }
 
 .main-menu ul li a:hover {
     text-decoration: none; /* 밑줄 제거 */
-    font-weight: 700; /* 호버 시 볼드체로 변경 */
+    font-weight: 800; /* 호버 시 볼드체로 변경 */
 }
 
 /* 다운로드 CV 버튼 */
 .download-cv {
     position: absolute;
-    top: 140px;
+    top: 150px;
     right: 410px;
 }
 
@@ -176,7 +176,7 @@ main {
 }
 
 .profile-photo {
-    width: 85%; /* 원래 크기보다 줄임 */
+    width: 100%; /* 원래 크기보다 줄임 */
     max-width: 300px;
     margin: 0 auto 20px;
 }
