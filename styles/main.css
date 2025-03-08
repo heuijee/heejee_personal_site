@@ -71,8 +71,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
+    padding: 30px 0;
+    position: relative;
+}
+
+/* 상단 헤더 아래 애니메이션 라인 추가 */
+.header-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: #000;
+    width: 0; /* 초기 너비는 0 */
+    animation: drawLine 1.5s ease-out forwards; /* 1.5초 동안 선이 그려지는 애니메이션 */
+}
+
+/* 선이 그려지는 애니메이션 정의 */
+@keyframes drawLine {
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 .site-name {
@@ -107,10 +124,12 @@ header {
     padding: 0 15px;
     font-size: 27px;
     letter-spacing: -0.02em;
+    transition: font-weight 0.3s ease; /* 글꼴 두께 변화에 애니메이션 적용 */
 }
 
 .main-menu ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none; /* 밑줄 제거 */
+    font-weight: 700; /* 호버 시 볼드체로 변경 */
 }
 
 /* 다운로드 CV 버튼 */
@@ -157,14 +176,14 @@ main {
 }
 
 .profile-photo {
-    margin-bottom: 20px;
-    width: 130%;
-    max-width: 400px;
+    width: 85%; /* 원래 크기보다 줄임 */
+    max-width: 300px;
+    margin: 0 auto 20px;
 }
 
 .profile-image {
-    width: 130%;
-    display: block;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .name {
@@ -278,10 +297,11 @@ main {
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
-    border-top: 1px solid #eee;
-    font-size: 19px;
-    letter-spacing: -0.01em;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #000; /* 상단에 선 추가 */
+    margin-top: 50px;
+    color: #666;
 }
 
 .copyright {
@@ -344,6 +364,17 @@ footer {
     
     .right-column {
         margin-top: 40px;
+    }
+    
+    .profile-photo {
+        width: 70%; /* 모바일에서는 더 작게 */
+        max-width: 250px;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
 }
 
