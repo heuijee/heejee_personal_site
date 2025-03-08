@@ -329,6 +329,163 @@ footer {
     font-size: 19px;
 }
 
+/* 현재 메뉴 활성화 스타일 */
+.main-menu ul li a.active {
+    font-weight: 700;
+}
+
+/* About 페이지 레이아웃 */
+.about-main {
+    display: flex;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+/* 사이드바 스타일링 */
+.sidebar {
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar .profile-photo {
+    width: 70%;
+    max-width: 200px;
+    margin: 0 auto 15px;
+}
+
+.sidebar-name {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 5px 0;
+    letter-spacing: -0.02em;
+}
+
+.sidebar-title {
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0 15px;
+    letter-spacing: -0.01em;
+}
+
+.sidebar .social-icons {
+    margin-top: 10px;
+}
+
+.sidebar .social-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+}
+
+/* 메인 콘텐츠 영역 */
+.content {
+    flex-basis: 75%;
+}
+
+.page-title {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #000;
+    display: inline-block;
+    letter-spacing: -0.03em;
+}
+
+.about-content {
+    line-height: 1.6;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+}
+
+/* 애니메이션 효과 */
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-profile {
+    animation: slideFromLeft 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.sidebar-name.animate-profile {
+    animation-delay: 0.2s;
+}
+
+.sidebar-title.animate-profile {
+    animation-delay: 0.3s;
+}
+
+.social-icons.animate-profile {
+    animation-delay: 0.4s;
+}
+
+.animate-title {
+    animation: fadeIn 0.7s ease-out forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+.animate-content {
+    animation: fadeIn 0.7s ease-out forwards;
+    animation-delay: 0.9s;
+    opacity: 0;
+}
+
+/* 반응형 레이아웃 */
+@media (max-width: 900px) {
+    .about-main {
+        flex-direction: column;
+    }
+    
+    .sidebar, .content {
+        flex-basis: 100%;
+    }
+    
+    .sidebar {
+        margin-bottom: 30px;
+    }
+    
+    .page-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 28px;
+    }
+    
+    .about-content p {
+        font-size: 16px;
+    }
+}
+
 /* 반응형 스타일 */
 @media (max-width: 900px) {
     header {
