@@ -7,45 +7,70 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <header class="site-header">
-        <div class="container">
-            <h1 class="site-title"><a href="index.html">Heuijee Yun</a></h1>
-            <nav class="main-nav">
-                <div class="nav-container">
-                    <ul>
-                        <li><a href="about.html" class="active">About</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="cv.html">CV</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+<body class="about-page">
+    <header>
+        <div class="site-name">Heuijee Yun</div>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-line"></div>
     </header>
 
-    <section class="page-section about">
-        <div class="container">
-            <h2 class="section-title">About</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hello, I am a researcher with a keen interest in web development. I enjoy creative problem-solving and user-friendly design.</p>
-                    <p>This website was created using GitHub Pages and serves as a space to showcase my portfolio and projects.</p>
-                    
-                    <!-- Add more content about yourself here -->
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lacus euismod, aliquam ligula vel, laoreet magna. Praesent euismod urna vel velit dictum, id sagittis elit euismod. Fusce auctor purus in magna tempus, quis feugiat nisl tempus.</p>
-                    
-                    <p>Praesent blandit, lorem id aliquam fermentum, odio nunc fermentum arcu, eget placerat ligula enim vel enim. Curabitur eu aliquam lacus, et sagittis orci. Integer pharetra lobortis mauris ut gravida.</p>
-                </div>
+    <div class="download-cv">
+        <a href="cv.pdf" class="cv-button">Download CV</a>
+    </div>
+    
+    <main class="about-main">
+        <div class="sidebar">
+            <div class="profile-photo animate-profile">
+                <img src="images/profile.jpg" alt="Heuijee Yun" class="profile-image">
+            </div>
+            <h2 class="sidebar-name animate-profile">Heuijee Yun</h2>
+            <p class="sidebar-title animate-profile">Ph.D Student</p>
+            <div class="social-icons animate-profile">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                <a href="#" class="social-icon"><i class="fas fa-laptop-code"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-orcid"></i></a>
             </div>
         </div>
-    </section>
-
+        
+        <div class="content">
+            <h1 class="page-title animate-title">About</h1>
+            <div class="about-content animate-content">
+                <p>Hello, I am a researcher with a keen interest in web development. I enjoy creative problem-solving and user-friendly design.</p>
+                
+                <p>This website was created using GitHub Pages and serves as a space to showcase my portfolio and projects.</p>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lacus euismod, aliquam ligula vel, laoreet magna. Praesent euismod urna vel velit dictum, id sagittis elit euismod. Fusce auctor purus in magna tempus, quis feugiat nisl tempus.</p>
+                
+                <p>Praesent blandit, lorem id aliquam fermentum, odio nunc fermentum arcu, eget placerat ligula enim vel enim. Curabitur eu aliquam lacus, et sagittis orci. Integer pharetra lobortis mauris ut gravida.</p>
+            </div>
+        </div>
+    </main>
+    
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Heuijee Yun. All Rights Reserved.</p>
+        <div class="copyright">
+            <p>&copy; 2025 Heuijee Yun</p>
+        </div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">053-950-5548</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">email</span>
+                <span class="contact-value">Heuijee@knu.ac.kr</span>
+            </div>
         </div>
     </footer>
 
