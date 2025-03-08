@@ -116,8 +116,8 @@ header {
 /* 다운로드 CV 버튼 */
 .download-cv {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 80px;
+    right: 410px;
 }
 
 .cv-button {
@@ -149,7 +149,7 @@ main {
 
 /* 좌측 칼럼 */
 .left-column {
-    flex-basis: 35%;
+    flex-basis: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,17 +158,17 @@ main {
 
 .profile-photo {
     margin-bottom: 20px;
-    width: 100%;
-    max-width: 350px;
+    width: 130%;
+    max-width: 400px;
 }
 
 .profile-image {
-    width: 100%;
+    width: 130%;
     display: block;
 }
 
 .name {
-    font-size: 53px;
+    font-size: 55px;
     font-weight: 700;
     margin: 20px 0 5px;
     letter-spacing: -0.04em;
@@ -201,7 +201,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 21px;
+    font-size: 23px;
     color: #fff;
 }
 
@@ -211,7 +211,7 @@ main {
 
 /* 우측 칼럼 */
 .right-column {
-    flex-basis: 65%;
+    flex-basis: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
