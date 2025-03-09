@@ -58,6 +58,8 @@ main {
     padding: 0;
     gap: 50px;
     overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* 왼쪽 컬럼 통일 */
@@ -989,7 +991,7 @@ body.contact-page main.contact-main {
 }
 
 body.contact-page .contact-form-container {
-    max-width: 800px; /* 너비 증가 */
+    max-width: 550px; /* 너비 증가 */
     width: 80%; /* 화면 비율에 맞게 설정 */
     margin: 0 auto;
     padding: 0;
@@ -1126,4 +1128,103 @@ body.contact-page .send-button-container {
     animation: fadeInFast 0.4s ease-out forwards;
     animation-delay: 0.7s;
     opacity: 0;
+}
+
+/* 홈페이지 전용 레이아웃 */
+body.homepage main {
+    padding: 0;
+}
+
+/* 홈페이지 좌우 컬럼 비율 조정 */
+body.homepage .left-column {
+    flex-basis: 40%; /* 좌측 컬럼 비율 증가 */
+    align-items: flex-end; /* 우측 정렬 */
+    padding-right: 30px; /* 오른쪽 여백 추가 */
+}
+
+body.homepage .right-column {
+    flex-basis: 60%; /* 우측 컬럼 비율 감소 */
+    justify-content: center;
+    padding-top: 0;
+}
+
+/* 홈페이지 프로필 요소 크기 조정 */
+body.homepage .profile-photo {
+    width: 100%;
+    max-width: 350px; /* 사진 크기 증가 */
+    margin: 0 auto 25px;
+}
+
+body.homepage .name {
+    font-size: 48px; /* 이름 폰트 크기 증가 */
+    font-weight: 700;
+    margin: 20px 0 5px;
+    letter-spacing: -0.03em;
+}
+
+body.homepage .title {
+    font-size: 24px; /* 직함 폰트 크기 증가 */
+    margin: 5px 0 20px;
+    letter-spacing: -0.01em;
+}
+
+body.homepage .social-icons {
+    gap: 20px; /* 아이콘 간격 증가 */
+    margin-top: 30px;
+}
+
+body.homepage .social-icon {
+    width: 45px; /* 아이콘 크기 증가 */
+    height: 45px;
+    font-size: 22px;
+}
+
+/* index 페이지 반응형 조정 */
+@media (max-width: 900px) {
+    body.homepage .left-column {
+        flex-basis: 100%;
+        align-items: center;
+        padding-right: 0;
+    }
+    
+    body.homepage .right-column {
+        flex-basis: 100%;
+        margin-top: 20px;
+    }
+    
+    body.homepage .profile-photo {
+        max-width: 300px; /* 모바일에서 약간 축소 */
+    }
+    
+    body.homepage .name {
+        font-size: 40px; /* 모바일에서 약간 축소 */
+    }
+    
+    body.homepage .title {
+        font-size: 22px; /* 모바일에서 약간 축소 */
+    }
+}
+
+/* 중복 스타일 제거 및 정리 */
+/* index 페이지와 콘텐츠 페이지 통일 스타일 제거 - 위에서 재정의함 */
+body.homepage main {
+    padding: 0;
+}
+
+/* 오른쪽 컬럼 기본 스타일 제거 - 위에서 재정의함 */
+.right-column {
+    justify-content: center;
+    padding-top: 0;
+}
+
+/* index 페이지의 소셜 아이콘 호버 효과 */
+body.homepage .social-icon:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* 공통 텍스트 스타일 */
+.intro-headline, .intro-detail, .intro-emphasis, .intro-highlight {
+    letter-spacing: -0.01em;
+    line-height: 1.6;
 } 
