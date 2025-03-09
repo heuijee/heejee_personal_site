@@ -561,26 +561,28 @@ footer {
     justify-content: center;
     padding: 0;
     flex: 1;
-    overflow-y: auto;
-    height: calc(100vh - 200px);
+    overflow: hidden; /* 스크롤 제거 */
 }
 
 .contact-form-container {
     max-width: 600px;
     width: 100%;
     margin: 30px auto;
-    padding-right: 15px;
+    padding-right: 0; /* 오른쪽 패딩 제거 */
+    overflow-y: hidden; /* 스크롤 제거 */
+    height: auto; /* 자동 높이 설정 */
+    flex-basis: auto; /* 기본 너비 설정 제거 */
 }
 
 .contact-title {
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     margin-bottom: 40px;
     letter-spacing: -0.03em;
-    display: inline-block;
     border-bottom: 1px solid #000;
     padding-bottom: 5px;
+    display: block; /* 블록 요소로 전체 너비 차지 */
 }
 
 .contact-form {
@@ -588,37 +590,35 @@ footer {
 }
 
 .form-group {
-    margin-bottom: 20px;
-    display: table;
+    display: flex;
     width: 100%;
-    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #000;
 }
 
 .form-group label {
-    display: table-cell;
     width: 120px;
     font-size: 18px;
     font-weight: 400;
-    padding: 8px 15px;
-    border: 1px solid #000;
-    border-right: none;
+    padding: 12px 15px;
     background-color: #fff;
-    vertical-align: middle;
+    border-right: 1px solid #000;
+    display: flex;
+    align-items: center;
 }
 
 .form-group input,
 .form-group textarea {
-    display: table-cell;
-    width: calc(100% - 120px);
-    padding: 8px 15px;
+    flex: 1;
+    padding: 12px 15px;
     font-size: 18px;
-    border: 1px solid #000;
+    border: none;
     font-family: 'Aileron', sans-serif;
 }
 
 .form-group textarea {
-    resize: vertical;
-    min-height: 160px;
+    min-height: 150px;
+    resize: none; /* 리사이즈 비활성화 */
 }
 
 .submit-button {
@@ -768,7 +768,7 @@ footer {
     background-color: #000;
     color: #fff;
     border: none;
-    padding: 15px;
+    padding: 15px 0;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -985,4 +985,52 @@ body.homepage main {
 .intro-headline, .intro-detail, .intro-emphasis, .intro-highlight {
     letter-spacing: -0.01em;
     line-height: 1.6;
+}
+
+/* Contact 페이지 전용 레이아웃 */
+body.contact-page main.contact-main {
+    display: block;
+    overflow: visible;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+body.contact-page .contact-form-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    height: auto;
+}
+
+/* 폼 요소 스타일 개선 */
+.contact-form {
+    width: 100%;
+}
+
+/* Send 버튼 스타일 재정의 */
+.send-button-container {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+}
+
+.send-button {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+}
+
+/* 전체 텍스트 너비에 맞게 조정 */
+.contact-title {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
 } 
