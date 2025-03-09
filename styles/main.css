@@ -46,6 +46,11 @@
     box-sizing: border-box;
 }
 
+/* 링크 기본 스타일 재정의 */
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Aileron', sans-serif;
     font-weight: 400;
@@ -101,12 +106,13 @@ header {
 
 .site-name a {
     text-decoration: none;
-    color: inherit;
+    color: #000;
     transition: opacity 0.2s ease;
 }
 
 .site-name a:hover {
     opacity: 0.8;
+    text-decoration: none;
 }
 
 .main-menu ul {
