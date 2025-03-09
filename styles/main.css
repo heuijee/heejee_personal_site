@@ -1224,13 +1224,6 @@ main, .about-main, .contact-main, body.homepage main {
     flex: 1;
 }
 
-/* 모든 overflow 제거 */
-.content, .right-column, .sidebar, .left-column, .projects-grid, .publications-content, .contact-main, 
-body.homepage .left-column, body.homepage .right-column {
-    overflow: visible !important;
-    max-height: none !important;
-    height: auto !important;
-}
 
 /* 반응형 조정 통합 */
 @media (max-width: 900px) {
