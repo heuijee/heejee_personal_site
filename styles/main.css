@@ -1158,19 +1158,19 @@ body.homepage .profile-photo {
 body.homepage .name {
     font-size: 48px; /* 이름 폰트 크기 증가 */
     font-weight: 700;
-    margin: 20px 0 5px;
+    margin: 0px 0 5px;
     letter-spacing: -0.03em;
 }
 
 body.homepage .title {
     font-size: 24px; /* 직함 폰트 크기 증가 */
-    margin: 5px 0 20px;
+    margin: 0px 0 20px;
     letter-spacing: -0.01em;
 }
 
 body.homepage .social-icons {
-    gap: 20px; /* 아이콘 간격 증가 */
-    margin-top: 30px;
+    gap: 10px; /* 아이콘 간격 증가 */
+    margin-top: 0px;
 }
 
 body.homepage .social-icon {
