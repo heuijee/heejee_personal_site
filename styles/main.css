@@ -83,7 +83,7 @@ main {
     padding: 20px 20px 20px 0;
 }
 
-/* 페이지 제목 스타일 - 모든 페이지에서 동일하게 표시 */
+/* 페이지 제목 스타일 - 텍스트 너비에 맞는 밑줄 */
 .page-title, .contact-title {
     font-size: 40px;
     font-weight: 400;
@@ -92,6 +92,7 @@ main {
     display: inline-block; /* 텍스트 너비에 맞게 설정 */
     border-bottom: 1px solid #000; /* 1px 밑줄 추가 */
     padding-bottom: 5px;
+    width: auto; /* 자동 너비 설정으로 텍스트에 맞춤 */
 }
 
 /* 모든 페이지 메인 영역 스타일 통일 */
@@ -120,9 +121,12 @@ main {
     margin: 0;
 }
 
-/* contact 제목 정렬 수정 */
+/* Contact 페이지 제목 조정 */
 .contact-title {
-    text-align: left;
+    text-align: center;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: auto;
 }
 
 /* about 페이지 레이아웃 조정 */
@@ -754,31 +758,21 @@ footer {
     text-decoration: none;
 }
 
-/* Send 버튼 컨테이너 */
+/* Send 버튼 스타일 */
 .send-button-container {
-    display: block;
     width: 100%;
     margin-top: 20px;
+    border: none;
 }
 
-/* Send 버튼 스타일 */
 .send-button {
-    display: block;
     width: 100%;
     background-color: #000;
     color: #fff;
-    border: none;
     padding: 15px 0;
     font-size: 20px;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    cursor: pointer;
-    transition: opacity 0.3s;
-    font-family: 'Aileron', sans-serif;
-}
-
-.send-button:hover {
-    opacity: 0.8;
+    border: none;
 }
 
 /* 폼 제출 결과 영역 */
@@ -975,12 +969,6 @@ body.homepage main {
     padding-top: 0;
 }
 
-/* contact 페이지 제목 조정 */
-.contact-title {
-    margin-top: 0;
-    font-weight: 700;
-}
-
 /* 모든 페이지 본문 스타일 통일 */
 .intro-headline, .intro-detail, .intro-emphasis, .intro-highlight {
     letter-spacing: -0.01em;
@@ -989,42 +977,51 @@ body.homepage main {
 
 /* Contact 페이지 전용 레이아웃 */
 body.contact-page main.contact-main {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     overflow: visible;
-    max-width: 700px;
+    max-width: 100%;
     margin: 30px auto;
     padding: 0 15px;
 }
 
 body.contact-page .contact-form-container {
-    max-width: 150%;
-    width: 150%;
+    max-width: 600px;
+    width: 100%;
     margin: 0;
     padding: 0;
     overflow: visible;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* 폼 요소 스타일 개선 */
+/* Contact 페이지 제목 정렬 */
+.contact-title {
+    text-align: center;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: auto;
+    justify-self: center;
+}
+
+/* Contact 페이지 폼 너비 조정 */
 .contact-form {
     width: 100%;
 }
 
-/* Send 버튼 스타일 재정의 */
-.send-button-container {
+/* Contact 페이지 푸터 스타일 */
+body.contact-page footer {
     width: 100%;
-    margin-top: 20px;
-    border: none;
-}
-
-.send-button {
-    width: 100%;
-    background-color: #000;
-    color: #fff;
-    padding: 15px 0;
-    font-size: 20px;
-    font-weight: 700;
-    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid #000;
 }
 
 /* 전체 텍스트 너비에 맞게 조정 */
