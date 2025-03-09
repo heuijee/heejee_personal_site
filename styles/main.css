@@ -571,4 +571,75 @@ footer {
     .contact-item {
         align-items: flex-start;
     }
+}
+
+/* Research 페이지 스타일 */
+.research-content {
+    line-height: 1.6;
+}
+
+.research-section {
+    margin-bottom: 30px;
+}
+
+.research-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+    color: #000;
+}
+
+.research-text {
+    margin-bottom: 10px;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+    padding-left: 10px;
+}
+
+/* Publications 페이지 스타일 */
+.publications-content {
+    line-height: 1.6;
+}
+
+.publication-item {
+    margin-bottom: 35px;
+}
+
+.publication-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.publication-authors {
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.publication-abstract {
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+}
+
+.publication-links {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.pub-link {
+    display: inline-block;
+    margin-right: 10px;
+    color: #000;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.pub-link:hover {
+    opacity: 0.7;
 } 
