@@ -1126,4 +1126,41 @@ body.contact-page .send-button-container {
     animation: fadeInFast 0.4s ease-out forwards;
     animation-delay: 0.7s;
     opacity: 0;
+}
+
+/* 형광펜 효과 애니메이션 */
+@keyframes highlightSweep {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* 인턴 찾는다는 문장에 형광펜 효과 */
+.intro-detail:nth-child(4) {
+    position: relative;
+    background-image: linear-gradient(to right, transparent 0%, transparent 35%, rgba(255, 255, 100, 0.6) 35%, rgba(255, 255, 100, 0.6) 65%, transparent 65%, transparent 100%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: highlightSweep 1.5s ease-in-out 1s forwards;
+}
+
+/* NO FUNDINGS NEEDED 텍스트에 형광펜 효과 */
+.intro-highlight:first-of-type {
+    position: relative;
+    background-image: linear-gradient(to right, transparent 0%, transparent 35%, rgba(255, 255, 100, 0.6) 35%, rgba(255, 255, 100, 0.6) 65%, transparent 65%, transparent 100%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: highlightSweep 1.5s ease-in-out 2s forwards;
+}
+
+/* 의자와 책상만 필요하다는 문장에 형광펜 효과 */
+.intro-highlight:last-of-type {
+    position: relative;
+    background-image: linear-gradient(to right, transparent 0%, transparent 35%, rgba(255, 255, 100, 0.6) 35%, rgba(255, 255, 100, 0.6) 65%, transparent 65%, transparent 100%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: highlightSweep 1.5s ease-in-out 3s forwards;
 } 
