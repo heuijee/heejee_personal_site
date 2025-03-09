@@ -56,6 +56,7 @@ html, body {
     height: 100%;
     margin: 0;
     overflow: hidden;
+    padding: 0 60px;
 }
 
 body {
@@ -269,8 +270,11 @@ main {
     padding: 20px 20px 20px 0;
 }
 
+/* 홈페이지 스크롤 조정 */
 .intro {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    overflow-y: auto;
+    padding-right: 15px;
 }
 
 .intro-headline {
@@ -302,10 +306,12 @@ main {
     letter-spacing: -0.03em;
 }
 
+/* 액션 버튼 위치 조정 */
 .action-buttons {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .action-button {
@@ -736,7 +742,8 @@ footer {
 .contact-form-container {
     max-width: 600px;
     width: 100%;
-    margin: 0 auto;
+    margin: 30px auto;
+    padding-right: 15px;
 }
 
 .contact-title {
@@ -830,4 +837,89 @@ footer {
         display: block;
         width: 100%;
     }
+}
+
+/* 스크롤바 스타일 */
+.content, .right-column, .sidebar, .left-column, .projects-grid, .publications-content, .contact-main {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.content::-webkit-scrollbar, 
+.right-column::-webkit-scrollbar, 
+.sidebar::-webkit-scrollbar, 
+.left-column::-webkit-scrollbar,
+.projects-grid::-webkit-scrollbar,
+.publications-content::-webkit-scrollbar,
+.contact-main::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content::-webkit-scrollbar-track, 
+.right-column::-webkit-scrollbar-track, 
+.sidebar::-webkit-scrollbar-track, 
+.left-column::-webkit-scrollbar-track,
+.projects-grid::-webkit-scrollbar-track,
+.publications-content::-webkit-scrollbar-track,
+.contact-main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb, 
+.right-column::-webkit-scrollbar-thumb, 
+.sidebar::-webkit-scrollbar-thumb, 
+.left-column::-webkit-scrollbar-thumb,
+.projects-grid::-webkit-scrollbar-thumb,
+.publications-content::-webkit-scrollbar-thumb,
+.contact-main::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+/* 본문 여백 조정 */
+.about-content, .research-content {
+    padding-right: 15px;
+    padding-bottom: 30px;
+}
+
+/* Blogs 페이지 스타일 */
+.blogs-content {
+    width: 100%;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.blog-item {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.blog-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-date {
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.blog-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.blog-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-link:hover {
+    text-decoration: none;
 } 
