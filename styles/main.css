@@ -1074,4 +1074,56 @@ body.contact-page .send-button {
 
 body.contact-page .send-button:hover {
     opacity: 0.8;
+}
+
+/* Contact 페이지 전용 애니메이션 */
+@keyframes fadeInFast {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact 페이지의 애니메이션 속도 조정 */
+body.contact-page .contact-title {
+    animation: fadeInFast 0.4s ease-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+body.contact-page .contact-form-container {
+    animation: none; /* 기본 애니메이션 제거 */
+}
+
+body.contact-page .contact-form {
+    animation: fadeInFast 0.4s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+body.contact-page .form-group {
+    animation: fadeInFast 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+body.contact-page .form-group:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+body.contact-page .form-group:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+body.contact-page .form-group:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+body.contact-page .send-button-container {
+    animation: fadeInFast 0.4s ease-out forwards;
+    animation-delay: 0.7s;
+    opacity: 0;
 } 
