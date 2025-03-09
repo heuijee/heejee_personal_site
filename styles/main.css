@@ -92,10 +92,21 @@ header {
     to { width: 100%; }
 }
 
+/* 사이트 이름 스타일 */
 .site-name {
-    font-size: 35px;
-    font-weight: 400;
-    letter-spacing: -0.03em;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.site-name a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.site-name a:hover {
+    opacity: 0.8;
 }
 
 .main-menu ul {
